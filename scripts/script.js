@@ -1,21 +1,20 @@
 const completeButton = document.querySelectorAll(".complete-btn");
 for (let i = 0; i < completeButton.length; i++) {
   completeButton[i].addEventListener("click", function () {
-    alert("Task completed successfully!");
+    alert("Board Updated Successfully!!");
     const taskAssign = document.getElementById("task-assign");
     let taskCount = parseInt(taskAssign.innerText);
     const doneCount = document.getElementById("done-count");
     let doneTaskCount = parseInt(doneCount.innerText);
-
     if (taskCount > 0) {
       taskAssign.innerText = taskCount - 1;
     }
     doneCount.innerText = doneTaskCount + 1;
 
     // date implement
+   
     const now = new Date();
     const buttonClickTime = now.toLocaleTimeString();
-
     let card = this.closest("div.mt-7");
     if (card) {
       let cardHeading = card.querySelector("h1").innerText;
@@ -31,7 +30,7 @@ for (let i = 0; i < completeButton.length; i++) {
       newEntryAt.innerText = ` at ${buttonClickTime}`;
 
       let newEntry = document.createElement("p");
-      newEntry.className = "p-5 bg-[#F4F7FF] rounded-lg mt-2";
+      newEntry.className = "p-5 bg-[#F4F7FF] rounded-lg mt-4";
       newEntry.appendChild(newEntryFirst);
       newEntry.appendChild(newEntryBold);
       newEntry.appendChild(newEntryAt);
@@ -41,5 +40,8 @@ for (let i = 0; i < completeButton.length; i++) {
     this.disabled = true;
     this.innerText = "Completed";
     this.classList.add("opacity-50", "cursor-not-allowed");
+    if (taskCount === 1) {
+      alert("congrats!!! You have completed all the task");
+    }
   });
 }
