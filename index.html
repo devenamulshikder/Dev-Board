@@ -32,8 +32,8 @@
                         <img width="25" src="./assets/checkbox.png" alt="">
                         <h1 id="done-count" class="font-bold text-[#1E1E1E] text-2xl">23</h1>
                     </div>
-                    <div class="p-2 bg-[#F4F7FF] rounded-full mr-2">
-                        <img width="32" src="./assets/theme-btn.png" alt="">
+                    <div id="change-bg" class="p-2 bg-[#F4F7FF] rounded-full mr-2 hover:cursor-pointer">
+                        <img class="hover:animate-spin " width="32" src="./assets/theme-btn.png" alt="">
                     </div>
              </div>
         </div>
@@ -191,7 +191,7 @@
                         <h1 class="text-[#00303C]">Activity Log</h1>
                     </div>
                 
-                            <button class="btn bg-[#3752FD] hover:bg-indigo-500 text-[#ffffffdf] mt-5">Clear History</button>
+                            <button id="clear-history" class="btn bg-[#3752FD] hover:bg-indigo-500 text-[#ffffffdf] mt-5">Clear History</button>
        
                 </div>
                 <div id="history" class="p-6">
@@ -199,8 +199,8 @@
                 </div>
             </div>
         </main>
-</section>
- <script>
+    </section>
+    <script>
         const today = new Date();
         const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
         const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];

@@ -12,7 +12,6 @@ for (let i = 0; i < completeButton.length; i++) {
     doneCount.innerText = doneTaskCount + 1;
 
     // date implement
-   
     const now = new Date();
     const buttonClickTime = now.toLocaleTimeString();
     let card = this.closest("div.mt-7");
@@ -35,6 +34,12 @@ for (let i = 0; i < completeButton.length; i++) {
       newEntry.appendChild(newEntryBold);
       newEntry.appendChild(newEntryAt);
       historyDiv.appendChild(newEntry);
+      document
+        .getElementById("clear-history")
+        .addEventListener("click", function () {
+          const historyDivRemove = document.getElementById("history");
+          historyDivRemove.removeChild(newEntry);
+        });
     }
 
     this.disabled = true;
@@ -45,3 +50,30 @@ for (let i = 0; i < completeButton.length; i++) {
     }
   });
 }
+
+// Background color change feature
+const changeBgButton = document.getElementById("change-bg");
+const colors = [
+  "#D1C4E9",
+  "#E0F7FA",
+  "#FFEBEE",
+  "#E8F5E9",
+  "#F3E5F5",
+  "#FFF3E0",
+  "#C8E6C9",
+  "#FFCDD2",
+  "#B3E5FC",
+  "#DCEDC8",
+  "#FFE0B2",
+];
+let currentColorIndex = 0;
+
+changeBgButton.addEventListener("click", function () {
+  document.body.style.backgroundColor = colors[currentColorIndex];
+  currentColorIndex = (currentColorIndex + 1) % colors.length;
+});
+
+// Clear history functionality
+document.getElementById("clear-history").addEventListener("click", function () {
+  document.getElementById("history").innerHTML = "";
+});
