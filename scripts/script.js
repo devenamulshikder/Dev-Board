@@ -77,3 +77,10 @@ changeBgButton.addEventListener("click", function () {
 document.getElementById("clear-history").addEventListener("click", function () {
   document.getElementById("history").innerHTML = "";
 });
+
+
+// open blog site
+document.getElementById('open-blog').addEventListener('click', function(e){
+  e.preventDefault()
+  window.location.href = '/blog.html'
+})

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Board | Blogs</title>
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+    <!-- daisy ui and tailwindCSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.9/daisyui.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- css for google font -->
+    <link rel="stylesheet" href="./style.css" />
+    <!-- icon link -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  </head>
+  <body class="bg-[#F4F7FF] min-h-screen py-5">
+    <section class="container mx-auto">
+      <header>
+        <nav>
+          <div class="navbar bg-[#fff] shadow-sm rounded-md">
+            <div class="flex-1">
+              <div class="flex items-center gap-2">
+                <img class="ml-2" width="40" src="./assets/logo.png" alt="" />
+                <h1 class="text-2xl">
+                  Dev<span class="font-semibold text-[#00303C]">Board</span>
+                </h1>
+              </div>
+            </div>
+             <div>
+                  <button
+                    id="back-btn"
+                    class="complete-btn btn bg-[#3752FD] hover:bg-indigo-500 text-[#ffffffdf]"
+                  >
+                  <i class="fa-regular fa-hand-point-left mt-1 text-lg text-gray-800"></i>
+                    Back To Desk
+                  </button>
+                </div>
+          </div>
+        </nav>
+      </header>
+    </section>
+
+    <script src="./scripts/blog.js"></script>
+  </body>
+</html>
